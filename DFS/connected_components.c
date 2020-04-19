@@ -77,7 +77,7 @@ int main(){
 		dfs(edge, i);
 	}
 
-	printf("%d\n", cnt);
+	printf("there are %d connected components\n", cnt);
 
 
 
