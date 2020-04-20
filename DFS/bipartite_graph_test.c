@@ -77,7 +77,7 @@ int main(){
 
 	puts( ok ? "Yes it is a Bipartite Graph" : "No it is not a Bipartite Graph");
 	
-	//realted problem : https://www.spoj.com/problems/BUGLIFE/
+	//related problem : https://www.spoj.com/problems/BUGLIFE/
 
 
 
