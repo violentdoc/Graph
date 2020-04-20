@@ -76,6 +76,8 @@ int main(){
 	dfs(edge, 1, 1);
 
 	puts( ok ? "Yes it is a Bipartite Graph" : "No it is not a Bipartite Graph");
+	
+	//realted problem : https://www.spoj.com/problems/BUGLIFE/
 
 
 
