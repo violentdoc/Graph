@@ -79,7 +79,8 @@ int main(){
 
 	printf("there are %d connected components\n", cnt);
 	
-	//related problem link : https://www.hackerearth.com/problem/algorithm/connected-components-in-a-graph/
+	//related problem link : 1. https://www.hackerearth.com/problem/algorithm/connected-components-in-a-graph/
+	// 2. https://www.spoj.com/problems/PT07Y/
 
 
 
