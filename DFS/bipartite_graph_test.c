@@ -23,9 +23,8 @@ int traverse(int u, int v){
 	return -1;
 }
 
-void rlc(int u, int v, int c1, int c2){
+void rlc(struct info *edge, int u, int c1){
 	edge[u].a = (int *) realloc(edge[u].a, c1 * sizeof(*edge[u].a));
-	edge[v].a = (int *) realloc(edge[v].a, c2 * sizeof(*edge[v].a));
 }
 
 void push(int u, int v){
@@ -35,7 +34,8 @@ void push(int u, int v){
 		c1 = edge[u].c += 1;
 		c2 = edge[v].c += 1;
 
-		rlc(u, v, c1, c2); 
+		rlc(edge, u, c1);
+		rlc(edge, v, c2);
 
 		edge[u].a[c1 - 1] = v;
 		edge[v].a[c2 - 1] = u;
