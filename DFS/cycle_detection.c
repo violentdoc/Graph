@@ -39,7 +39,6 @@ int dfs (struct info *edge, int node, int parent) {
 			return dfs (edge, ai, node);
 		}
 	}
-	return 0;
 }
 
 int main () {
@@ -54,6 +53,7 @@ int main () {
 
 	memset (vis, 1, sizeof vis);
 
+	cycle = 0;
 	cycle = dfs (edge, 1, -1);
 
 	puts (cycle ? "YES it contains a cycle" : "NO it doesn't contain any cycle");
