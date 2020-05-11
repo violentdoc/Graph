@@ -19,13 +19,16 @@ int dfs (int p, int i) {
 
 	for (o = ae[i]; o; o = oo[o]) {
 		j = oj[o];
-		if (vis[j]) {
-			if (j != p) {
+		if (vis[j] == 0) {
+			if ( dfs(i, j) == 1 ) {
 				return 1;
 			}
 		}
-		else return dfs (i, j);
+		else if (p != j) {
+			return 1;
+		}
 	}
+	return 0;
 }
 
 int main () {
@@ -38,8 +41,7 @@ int main () {
 		ae[j] = link (ae[j], i);
 	}
 
-	cycle = 0;
-	cycle = dfs (-1, 2);
+	cycle = dfs (-1, 0);
 
 	puts (cycle ? "YES there's a cycle in between" : "NO there isn't");
 }
